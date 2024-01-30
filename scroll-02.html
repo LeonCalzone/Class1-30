@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scroll Interaction Example</title>
+    <style>
+        .content {
+            height: 2000px; /* Just for demonstration */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">Scroll down the page...</div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            // Log the current scroll position
+            console.log(window.scrollY);
+
+            // Change background color based on scroll position
+            if (window.scrollY > 100) {
+                document.body.style.backgroundColor = 'lightblue';
+            } else {
+                document.body.style.backgroundColor = 'white';
+            }
+          
+        });
+    </script>
+</body>
+</html>

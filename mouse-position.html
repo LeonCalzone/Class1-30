@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Position Example</title>
+</head>
+<body>
+    <p id="mousePositionDisplay">Move your mouse to see the position!</p>
+
+    <script>
+        // Function to update mouse position
+        function updateMousePosition(event) {
+            var x = event.clientX; // Get the horizontal coordinate
+            var y = event.clientY; // Get the vertical coordinate
+            var coor = "X coords: " + x + ", Y coords: " + y;
+            document.getElementById("mousePositionDisplay").textContent = coor;
+        }
+
+        // Add event listener for mouse movement
+        document.addEventListener("mousemove", updateMousePosition);
+    </script>
+</body>
+</html>

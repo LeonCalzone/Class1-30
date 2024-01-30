@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple setInterval Example</title>
+</head>
+<body>
+    <script>
+        let count=0;
+        // Define a function that logs a message
+        function repeatMessage() {
+            console.log("This message is logged every " + count + " second!");
+            count = count + 1;
+        }
+        // Call repeatMessage every 1000 milliseconds (1 second)
+        setInterval(repeatMessage, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Background</title>
+</head>
+<body>
+   <p id="dolphin-text">Dolphins are highly intelligent marine mammals known for their playful nature, acrobatic abilities, and complex social structures. They belong to the family Delphinidae and are part of the order of cetaceans, which also includes whales and porpoises. Dolphins are easily recognizable by their curved dorsal fin, conical teeth, and elongated bodies. They vary in size, with species like the Maui's dolphin being as small as 1.7 meters in length, while the killer whale, which is actually a type of dolphin, can grow up to 9 meters long. One of the most distinct features of dolphins is their sophisticated echolocation ability, which allows them to navigate and find food in the ocean's murky depths. Their diet mainly consists of fish and squid, and they are known to employ complex hunting strategies, such as herding and cooperative hunting.
+
+    Dolphins are found worldwide, mostly in the shallower seas of the continental shelves. They are social creatures, living in groups called pods, which can consist of up to a dozen individuals. However, some species form superpods that can include over a thousand dolphins. Communication among dolphins is achieved through a variety of clicks, whistle-like sounds, and body movements. Dolphins are also famous for their intelligence; studies have shown they exhibit behaviors such as problem-solving skills, self-recognition, and the use of tools. Sadly, many dolphin species face significant threats from human activities. These include habitat destruction, pollution, and entanglement in fishing gear. Some species are hunted for their meat and oil. Consequently, various conservation efforts are underway to protect them, emphasizing the importance of maintaining biodiversity and the health of marine ecosystems.</p>
+    <script>
+        
+        // Define an array of colors
+        var colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+
+        document.addEventListener("click", function(){
+            // Generate a random index based on the array length
+            var randomIndex = Math.floor(Math.random() * colors.length);
+
+            // Select a color from the array using the random index
+            var selectedColor = colors[randomIndex];
+
+            // Apply the selected color to the text of the dolphin-text element
+            document.getElementById("dolphin-text").style.color = selectedColor;
+
+            // Logging the color and random index
+            console.log("Selected Text Color:", selectedColor);
+            console.log("Random Index:", randomIndex);
+        });
+
+    </script>
+</body>
+</html>

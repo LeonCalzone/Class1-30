@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Animation</title>
+    <style>
+        section {
+            width: 200px;
+            margin: auto;
+        }
+        #off {
+            position: relative;
+            width: 200px;
+            margin: auto;
+            transform: translateX(342px);
+            transition: transform 1s ease-out; /* Smooth transition for the transform */
+        }
+    </style>
+</head>
+<body>
+    <h1 >The section element</h1>
+    <section>
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <section>
+      <h2>WWF's Symbol</h2>
+      <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <section id="off">
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <section>
+      <h2>WWF's Symbol</h2>
+      <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <section>
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <section>
+      <h2>WWF's Symbol</h2>
+      <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <section>
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <section>
+      <h2>WWF's Symbol</h2>
+      <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <section>
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <section>
+      <h2>WWF's Symbol</h2>
+      <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <section>
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <section>
+      <h2>WWF's Symbol</h2>
+      <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+    </section>
+    <script>
+        // Function to handle the scroll event
+        function handleScroll() {
+            // Get the element with the ID 'off'
+            var element = document.getElementById("off");
+    
+            // Calculate the position of the element relative to the top of the viewport
+            var elementPosition = element.getBoundingClientRect().top;
+    
+            // Get half the height of the viewport
+            // Using half the height as a threshold for triggering the animation
+            var windowHeight = window.innerHeight / 2;
+    
+            // Check if the element is in the upper half of the viewport
+            if (elementPosition < windowHeight) {
+                // If yes, slide the element into view by resetting its horizontal position
+                element.style.transform = "translateX(0px)";
+            } else {
+                // If no, slide the element out of view by applying a horizontal translation
+                element.style.transform = "translateX(342px)";
+            }
+        }
+    
+        // Add an event listener to the window object
+        // This listener triggers the 'handleScroll' function every time the user scrolls
+        window.addEventListener("scroll", handleScroll);
+    </script>
+</body>
+</html>

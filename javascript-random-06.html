@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Background</title>
+</head>
+<body>
+   
+    <script>
+       
+       // Define an array of colors
+        var colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink"];
+
+        document.addEventListener("click", function(){
+            // Generate a random index based on the array length
+            console.log(colors.length);
+            var randomIndex = Math.floor(Math.random() * colors.length);
+
+            // Select a color from the array using the random index
+            var selectedColor = colors[randomIndex];
+
+            // Apply the selected color to the background
+            document.body.style.backgroundColor = selectedColor;
+
+            // Logging the color and random index
+            console.log("Selected Color:", selectedColor);
+            console.log("Random Index:", randomIndex);
+        });
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Background Example</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            transition: background-color 0.2s; /* Smooth transition for background color */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+
+            // Map the mouse position to a range of 0-255 for RGB values
+            var red = Math.round((x / width) * 255);
+            var blue = Math.round((y / height) * 255);
+
+            // Set the background color
+            document.body.style.backgroundColor = `rgb(${red}, 100, ${blue})`;
+        });
+    </script>
+</body>
+</html>
